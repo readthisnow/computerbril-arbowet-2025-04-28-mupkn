@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computerbril Arbowet - 20% Korting</title>
+    <meta name="description" content="Profiteer nu van 20% korting op computerbrilen conform Arbowet. Bescherm uw ogen tijdens beeldschermwerk.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white">
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ isOpen: false }">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-600">Computerbril</div>
+                <button @click="isOpen = !isOpen" class="md:hidden focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Voordelen</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Benefits</a>
+                    <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">FAQ</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative pt-32 pb-24 bg-gradient-to-br from-blue-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Computerbril Arbowet
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-600 font-semibold mb-8">
+                        Tijdelijk 20% Korting - Nog maar enkele dagen geldig!
+                    </p>
+                    <a href="https://computerbril.org/winkel" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        Profiteer Nu van 20% Korting
+                    </a>
+                    <p class="text-sm text-gray-600 mt-4">🔥 Al meer dan 1000+ tevreden klanten</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Waarom Onze Computerbril?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-xl bg-gray-50 hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Arbowet Gecertificeerd</h3>
+                        <p class="text-gray-600">Voldoet aan alle wettelijke eisen voor beeldschermwerk</p>
+                    </div>
+                    <!-- More feature cards... -->
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Voordelen</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Minder Vermoeide Ogen</h3>
+                            <p class="text-gray-600">Voorkom vermoeide ogen tijdens lange werkdagen</p>
+                        </div>
+                    </div>
+                    <!-- More benefits... -->
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-white" x-data="{ selected: null }">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Veelgestelde Vragen</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="border rounded-lg">
+                        <button @click="selected !== 1 ? selected = 1 : selected = null" class="flex justify-between items-center w-full px-6 py-4 text-left">
+                            <span class="font-semibold">Wat is de levertijd?</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-300" :class="{'rotate-180': selected === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 1" class="px-6 pb-4">
+                            <p class="text-gray-600">Normaal 2-3 werkdagen binnen Nederland</p>
+                        </div>
+                    </div>
+                    <!-- More FAQ items... -->
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-blue-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Mis Deze Aanbieding Niet!</h2>
+                <p class="text-xl mb-8">Nog maar enkele dagen 20% korting</p>
+                <a href="https://computerbril.org/winkel" class="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    Bestel Nu Met Korting
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <p>contact@example.com</p>
+                </div>
+                <!-- More footer columns... -->
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-sm text-gray-400">
+                <p>&copy; 2024 Computerbril. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
